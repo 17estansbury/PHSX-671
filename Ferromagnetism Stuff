@@ -1,12 +1,15 @@
 import numpy as np
 from random import random
+import matplotlib.pyplot as plt
+import numba
+
 
 print("What is the size of your grid?")
 
 grid = int(input())
 if grid <= 0:
-while True:
-print("Sorry that was invalid.")
+    while True:
+        print("Sorry that was invalid.")
 break
 else:
 init_random = np.random.random((grid,grid))

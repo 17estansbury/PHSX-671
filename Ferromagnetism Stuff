@@ -12,14 +12,14 @@ if grid <= 0:
         print("Sorry that was invalid.")
 break
 else:
-init_random = np.random.random((grid,grid))
-lattice = np.zeros((grid,grid))
-print("What is the spin quatinity?")
-spin = int(input())
-#print("Is the spin Positive or Negative?")
-#sign = input()
-#if sign == 'Positive':
-lattice[init_random < 0.5] = -1 * spin
-lattice[init_random >= 0.5] = 1 * spin
-#if lattice:
-print(lattice)
+    init_random = np.random.random((grid,grid))
+    lattice = np.zeros((grid,grid))
+    print("What is the spin quatinity?")
+    spin = int(input())
+    #print("Is the spin Positive or Negative?")
+    #sign = input()
+    #if sign == 'Positive':
+    lattice[init_random < 0.5] = -1 * spin
+    lattice[init_random >= 0.5] = 1 * spin
+    #if lattice:
+    print(lattice)

@@ -10,7 +10,7 @@ grid = int(input())
 if grid <= 0:
     while True:
         print("Sorry that was invalid.")
-break
+    break
 else:
     init_random = np.random.random((grid,grid))
     lattice = np.zeros((grid,grid))

@@ -23,3 +23,4 @@ else:
     lattice[init_random >= 0.5] = 1 * spin
     #if lattice:
     print(lattice)
+    plt.imshow(lattice)

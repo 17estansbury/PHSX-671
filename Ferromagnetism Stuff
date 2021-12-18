@@ -112,17 +112,15 @@ def get_spin_energy(lattice, BJs):
 
 magnetic_moment = pow(9.27, -21)
 magnitization = (get_energy(lattice_n)/magnetic_moment)
-print("The magnitization is: ",magnitization,-magnitization)
+print("The magnitization is:",magnitization,-magnitization)
 
 BJs = np.arange(0.1, 2, 0.05)
 ms_n, E_means_n, E_stds_n = get_spin_energy(lattice_n, BJs)
 ms_p, E_means_p, E_stds_p = get_spin_energy(lattice_p, BJs)
 
-
 plt.figure(figsize=(8,5))
 plt.plot(1/BJs, ms_n, 'o--', label='Negetive Spin')
 plt.plot(1/BJs, ms_p, 'o--', label='Positive Spin')
-#plt.plot(1/BJs, 1+BJs, label='Critical Temp')
 plt.xlabel(r'$\left(\frac{k}{J}\right)T$')
 plt.ylabel(r'$\bar{m}$')
 plt.legend(facecolor='white', framealpha=1)
@@ -130,7 +128,7 @@ plt.show()
 
 plt.plot(1/BJs, E_stds_n*BJs, label='Negetive Spin')
 plt.plot(1/BJs, E_stds_p*BJs, label='Positive Spin')
-#plt.plot(1/BJs, 1+BJs, label='Critical Temp')
+plt.plot(1/BJs, 1+BJs, label='Critical Temp')
 
 plt.xlabel(r'$\left(\frac{k}{J}\right)T$')
 plt.ylabel(r'$C_V / k^2$')
